@@ -1,5 +1,5 @@
 {
-  "name": "rails6_test",
+  "name": "book_shelf",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
