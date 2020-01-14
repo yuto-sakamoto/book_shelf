@@ -17,7 +17,10 @@ services:
       - db
 
   db:
-    image: mysql:8.0.18
+    build:
+      context: .
+      dockerfile: docker/db/Dockerfile_db
+    # image: mysql:8.0.18
     ports:
       - "3206:3306"
     volumes:

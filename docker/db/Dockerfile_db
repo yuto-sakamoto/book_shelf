@@ -1,0 +1,9 @@
+FROM mysql:8.0.18
+
+#ENV MYSQL_USER smart_company
+#ENV MYSQL_PASSWORD fjctadmin
+#ENV MYSQL_ROOT_PASSWORD fjct
+
+COPY docker/db/default_authentication.cnf /etc/mysql/conf.d/
+#COPY my.cnf /etc/mysql/
+EXPOSE 3206

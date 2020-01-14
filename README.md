@@ -24,3 +24,16 @@ Things you may want to cover:
 * ...
 # book_shelf
 book_shelf
+
+## 環境構築手順
+1. PJルートディレクトリで以下コマンドを実行する。
+```
+$ docker-compose up
+```
+
+## yarnのエラー
+```
+$ docker-compose run --rm app yarn install
+# 再度起動する
+$ docker-compose up
+```
