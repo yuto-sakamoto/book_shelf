@@ -37,3 +37,8 @@ $ docker-compose run --rm app yarn install
 # 再度起動する
 $ docker-compose up
 ```
+
+2. DBを作成する
+```
+$ docker-compose exec app rails db:setup
+```
