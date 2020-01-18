@@ -18,8 +18,8 @@ RUN apt-get update \
 
 WORKDIR /book_shelf
 COPY Gemfile* ./
-#RUN gem install bundler -v 2.0.2 \
-RUN  bundle install
+RUN gem install bundler -v 2.0.2
+RUN bundle install
 RUN  yarn install
 COPY . .
 EXPOSE 8080
