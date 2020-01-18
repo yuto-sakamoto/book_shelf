@@ -2,11 +2,10 @@
 <html>
 
 <head>
-  <title>Rails6Test</title>
+  <title>BookShelf</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -17,19 +16,25 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
         <% if user_signed_in? %>
         <li>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-          <%# <a href="collapsible.html">JavaScript</a> %>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="material-icons left">chevron_right </i>
+          ログアウト
+          <% end %>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to new_user_registration_path do %>
+          <i class="material-icons left">chevron_right </i>
+          新規登録
+          <% end %>
         </li>
         <% end %>
       </ul>
     </div>
   </nav>
 
-  <i class="material-icons">chevron_right </i>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
