@@ -42,3 +42,12 @@ $ docker-compose up
 ```
 $ docker-compose exec app rails db:setup
 ```
+
+
+## 開発環境
+
+メール認証確認のパス
+```
+$ rails routes
+letter_opener_web    /letter_opener   LetterOpenerWeb::Engine
+ ```
