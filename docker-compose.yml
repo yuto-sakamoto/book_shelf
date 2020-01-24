@@ -13,6 +13,7 @@ services:
       - bundle-path:/usr/local/bundle
     ports:
       - "8080:3000"
+      - "3035:3035"
     depends_on:
       - db
 
